@@ -1,0 +1,199 @@
+/*start pubic Code*/
+@font-face {
+    font-family: BMitra;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../font/BMitraeot');
+    src: url('../font/BMitraeot?#iefix') format('embedded-opentype'), /* -- */ url('../font/BMitra.woff2') format('woff2'), /* -- */ url('../font/BMitra.woff') format('woff'), /* -- */ url('../font/BMitrattf') format('truetype');
+}
+
+* {
+    direction: rtl;
+    transition: all .3s;
+    font-family: BMitra;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h5, a, p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.row {
+    width: 100%;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+/*start NavBar style*/
+nav {
+    background-color: #005264;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    line-height: 40px;
+}
+
+nav ul a {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+}
+
+nav ul a li {
+    padding: 0 20px;
+}
+
+nav ul a li:hover {
+    background: #0086a2;
+}
+
+
+/*start header image*/
+#header {
+    background: url("../images/css-images/tehran.jpg") center center no-repeat;
+    padding: 100px 0;
+}
+
+#header h2 {
+    display: block;
+    font-size: 80px;
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+#header p {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/*start post-list*/
+.content {
+    padding: 30px 0;
+}
+
+h2.titr-post-list {
+    color: #005264;
+    font-size: 35px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 232.5px;
+    border: 1px solid #005264;
+    margin: 10px;
+    padding: 25px 10px 80px;
+    position: relative;
+
+}
+
+.item h4 {
+    font-size: 30px;
+    color: #005264;
+    font-weight: bolder;
+}
+
+.item h4:hover {
+    color: #000;
+}
+
+.item span {
+    font-size: 17px;
+    color: #777;
+    /*display: block;*/
+}
+
+.item a.readmore {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    background: #005264;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.item a.readmore:hover {
+    background: #0086a2;
+
+}
+
+
+/*start footer*/
+footer {
+    background: #222;
+    padding: 20px 0;
+}
+
+.footer {
+    display: flex;
+}
+
+footer .footer-item {
+    width: 364px;
+    margin: 10px;
+}
+
+footer .footer-item h2 {
+    color: #0086a2;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0086a2;
+    margin-bottom: 10px;
+}
+
+footer .footer-item p {
+    color: #ccc;
+}
+
+.copyright {
+    border-top: 1px solid #144148;
+    padding-top: 10px;
+}
+
+.copyright p {
+    padding-right: 10px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.copyright p a {
+    color: #0086a2;
+}
