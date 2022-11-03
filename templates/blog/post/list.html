@@ -1,7 +1,7 @@
 {% extends 'blog/parent/base.html' %}
 
 {% block title %}
-لیست مقالات
+    لیست مقالات
 {% endblock %}
 
 {% block body %}
@@ -9,14 +9,18 @@
         <div class="container">
             <h2 class="titr-post-list">لیست مقالات:</h2>
             <div class="post-list">
-                <div class="item">
-                    <a href="#"><h4>پست نمونه</h4></a>
-                    <span>sgul</span>
-                    <span> / </span>
-                    <span>نویسنده</span>
-                    <br>
-                    <a href="#" class="readmore">ادامه مطلب</a>
-                </div>
+                {% for post in posts %}
+                    <div class="item">
+                        <a href="#"><h4>{{ post.title }}</h4></a>
+                        <span>{{ post.author }} </span>
+                        <span> / </span>
+                        <span> {{ post.publish.year }}-{{ post.publish.month }}-{{ post.publish.day }}</span>
+
+                        <br>
+                        <a href="#" class="readmore">ادامه مطلب</a>
+                    </div>
+
+                {% endfor %}
             </div>
         </div>
     </div>
