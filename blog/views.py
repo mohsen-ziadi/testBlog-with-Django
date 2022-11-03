@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from .models import Post
 
@@ -11,5 +11,6 @@ def post_list(requset):
     posts = Post.objects.filter(status="published")
     return render(requset,'blog/post/list.html',{'posts':posts})
 
-def post_detail(requset):
+def post_detail(requset,post,pk):
+    post = get_object_or_404(Post,slug=post,id=pk)
     return render(requset,'blog/post/detail.html')
