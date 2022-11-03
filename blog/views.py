@@ -8,3 +8,6 @@ def index(requset):
 
 def post_list(requset):
     return render(requset,'blog/post/list.html')
+
+def post_detail(requset):
+    return render(requset,'blog/post/detail.html')
