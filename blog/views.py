@@ -5,3 +5,9 @@ from django.http import HttpResponse
 
 def index(requset):
     return HttpResponse("Hello World")
+
+def post_list(requset):
+    return render(requset,'blog/post/list.html')
+
+def post_detail(requset):
+    return render(requset,'blog/post/detail.html')
