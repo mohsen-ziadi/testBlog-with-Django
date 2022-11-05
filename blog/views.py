@@ -5,7 +5,7 @@ from .models import Post
 # Create your views here.
 
 def index(requset):
-    return HttpResponse("Hello World")
+    return render(requset, 'blog/post/index.html')
 
 def post_list(requset):
     posts = Post.objects.filter(status="published")
