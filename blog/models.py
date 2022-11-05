@@ -23,7 +23,7 @@ class Post(models.Model):
         ordering=('-publish',)
 
     def get_absolute_url(self):
-        return reverse('blog:post-detai',args=[self.slug,self.id])
+        return reverse('blog:post-detail',args=[self.slug,self.id])
     def __str__(self):
         return self.title
 

@@ -13,4 +13,4 @@ def post_list(requset):
 
 def post_detail(requset,post,pk):
     post = get_object_or_404(Post,slug=post,id=pk)
-    return render(requset,'blog/post/detail.html')
+    return render(requset,'blog/post/detail.html',{'post':post})

@@ -11,13 +11,13 @@
             <div class="post-list">
                 {% for post in posts %}
                     <div class="item">
-                        <a href="#"><h4>{{ post.title }}</h4></a>
+                        <a href="{{ post.get_absolute_url }}"><h4>{{ post.title }}</h4></a>
                         <span>{{ post.author }} </span>
                         <span> / </span>
                         <span> {{ post.publish.year }}-{{ post.publish.month }}-{{ post.publish.day }}</span>
 
                         <br>
-                        <a href="#" class="readmore">ادامه مطلب</a>
+                        <a href="{{ post.get_absolute_url }}" class="readmore">ادامه مطلب</a>
                     </div>
 
                 {% endfor %}
