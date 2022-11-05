@@ -253,3 +253,24 @@ form{
 .submit-comment:hover{
     background: #0086a2!important;
 }
+
+
+/*start pagination*/
+#paginator{
+    background: red;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#paginator  a{
+    display: inline-block;
+}
+
+.numberOfPage{
+   width: 60%;
+    margin: 0 auto;
+}
+
+#paginator  li{
+    display: inline-block;
+}

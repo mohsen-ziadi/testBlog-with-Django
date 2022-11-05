@@ -1,0 +1,23 @@
+<div id="paginator">
+
+    <ul>
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">
+                <li>قبلی</li>
+            </a>
+        {% endif %}
+        <div class="numberOfPage">
+            {% for i in page.paginator.page_range %}
+            {% if i == page.number %}
+                <li class="red"> {{ i }}</li>
+            {% else %}
+                <li>{{ i }}</li>
+            {% endif %}
+        {% endfor %}
+        </div>
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}"> <li>بعدی</li> </a>
+        {% endif %}
+    </ul>
+
+</div>

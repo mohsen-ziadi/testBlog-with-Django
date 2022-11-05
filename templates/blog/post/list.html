@@ -21,7 +21,10 @@
                     </div>
 
                 {% endfor %}
+
+
             </div>
+            {% include 'blog/partials/paginator.html' with page=posts %}
         </div>
     </div>
 {% endblock %}
