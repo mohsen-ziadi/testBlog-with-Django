@@ -1,23 +1,42 @@
 <div id="paginator">
 
-    <ul>
+    <div class="prePage">
         {% if page.has_previous %}
             <a href="?page={{ page.previous_page_number }}">
                 <li>قبلی</li>
             </a>
+        {% else %}
+            <span>قبلی</span>
         {% endif %}
-        <div class="numberOfPage">
-            {% for i in page.paginator.page_range %}
+    </div>
+    <div class="numPage">
+        {% for i in page.paginator.page_range %}
             {% if i == page.number %}
-                <li class="red"> {{ i }}</li>
+                <span class="active-numPage">  {{ i }}  </span>
             {% else %}
-                <li>{{ i }}</li>
+                <span>  {{ i }}  </span>
             {% endif %}
         {% endfor %}
-        </div>
+    </div>
+    <div class="nxtPage">
+
         {% if page.has_next %}
-            <a href="?page={{ page.next_page_number }}"> <li>بعدی</li> </a>
+            <a href="?page={{ page.next_page_number }}">
+                بعدی
+            </a>
+        {% else %}
+            <span>بعدی</span>
         {% endif %}
+
+    </div>
+
+
+    <ul>
+
+        <div class="numberOfPage">
+
+        </div>
+
     </ul>
 
 </div>
