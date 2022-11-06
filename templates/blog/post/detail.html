@@ -9,36 +9,13 @@
         <div class="container">
             <div class="post-detail">
                 <h2 class="titr">
-                    پست نمونه
+                    {{ post.title }}
                 </h2>
-                <span>slug</span>
+                <span>{{ post.author }} </span>
                 <span> / </span>
-                <span>نویسنده</span>
+                <span>{{ post.publish.year }}-{{ post.publish.month }}-{{ post.publish.day }}</span>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae
-                    delectus harum hic, incidunt,
-                    iure labore magnam nam perferendis quae, recusandae sapiente suscipit ullam? Consequatur deserunt
-                    dolorum error quas ratione.</p>
+                <p>{{ post.body }}</p>
             </div>
 
             <div class="comment-form">
