@@ -50,6 +50,7 @@ nav {
     background-color: #005264;
     position: sticky;
     top: 0;
+    z-index: 200;
 }
 
 nav ul {
@@ -73,7 +74,7 @@ nav ul a li:hover {
 
 /*start header image*/
 #header {
-    background: url("../images/css-images/tehran.jpg") center center no-repeat;
+    background: url("../images/css-images/tehran.jpg") center center no-repeat fixed;
     padding: 100px 0;
 }
 
@@ -250,6 +251,65 @@ form{
     color: #fff !important;
 }
 
-.submit-comment:hover{
-    background: #0086a2!important;
+.submit-comment:hover {
+    background: #0086a2 !important;
 }
+
+
+/*start pagination*/
+#paginator {
+    width: 400px;
+    margin: 0 auto;
+    height: 50px;
+    overflow: hidden;
+    background: #ddd;
+    font-weight: bolder;
+    font-size: 18px;
+    direction: ltr;
+    color: #000;
+    margin-top: 70px;
+}
+
+.prePage {
+    width: 80px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+
+.prePage span {
+    color: #999;
+}
+
+.numPage {
+    width: 230px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+.numPage span {
+    padding: 0px 20px;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+.active-numPage {
+    background: #005264;
+    color: white;
+}
+
+.nxtPage {
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nxtPage span {
+    color: #999;
+}
+
+
