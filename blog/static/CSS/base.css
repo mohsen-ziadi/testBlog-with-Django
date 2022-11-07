@@ -120,7 +120,7 @@ h2.titr-post-list {
     margin: 10px;
     padding: 25px 10px 80px;
     position: relative;
-
+    border-radius: 5px;
 }
 
 .item h4 {
@@ -268,6 +268,7 @@ form{
     direction: ltr;
     color: #000;
     margin-top: 70px;
+    border-radius: 13px;
 }
 
 .prePage {
@@ -286,7 +287,7 @@ form{
     display: inline-block;
     text-align: center;
     line-height: 50px;
-
+    direction: ltr;
 }
 
 .numPage span {
