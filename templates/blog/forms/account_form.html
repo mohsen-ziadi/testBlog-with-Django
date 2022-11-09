@@ -1,0 +1,18 @@
+{% extends 'blog/parent/base.html' %}
+
+{% block title %}
+   فرم اطلاعات شخصی
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container">
+            <h2 class="titr-post-list">فرم اطلاعات شخصی:</h2>
+            <form method="post">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" value="ثبت">
+            </form>
+        </div>
+    </div>
+{% endblock %}

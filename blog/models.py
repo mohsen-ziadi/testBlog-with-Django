@@ -27,3 +27,18 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+
+class Account(models.Model):
+    GENDER_CHOICES = (
+        ('آقا', 'آقا'),
+        ('خانم', 'خانم')
+    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='account')
+    phone = models.CharField(max_length=11,null=True,blank=True)
+    gender = models.CharField(max_length=5, choices=GENDER_CHOICES, default='آقا')
+    address = models.TextField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.user.frist_name+" "+self.user.last_name
