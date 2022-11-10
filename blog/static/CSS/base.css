@@ -51,10 +51,22 @@ nav {
     position: sticky;
     top: 0;
     z-index: 200;
+    overflow: hidden;
 }
 
 nav ul {
     line-height: 40px;
+}
+
+nav ul#right-list-nav{
+    float: right;
+    display: inline-block;
+}
+
+nav ul#left-list-nav{
+    float: left;
+        display: inline-block;
+
 }
 
 nav ul a {
@@ -314,3 +326,58 @@ form{
 }
 
 
+/*start Account Form*/
+
+#AccountForm {
+
+}
+
+#AccountForm span {
+    display: inline-block;
+    font-size: 18px;
+    width: 80px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.input-account-form {
+    width: 200px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 17px;
+    color: #777;
+    line-height: 30px;
+}
+
+.input-account-form:focus {
+    border: 2px solid #000;
+    color: #000;
+}
+
+#AccountForm textarea {
+    width: 500px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 17px;
+    color: #777;
+    height: 150px;
+}
+
+#AccountForm textarea:focus {
+    border: 2px solid #000;
+    color: #000;
+}
+
+.submit-accuont-form{
+    width: 505px;
+    height: 40px;
+    background: #00c5f6;
+    border: 2.5px solid #005264;
+    color: #005264;
+    font-size: 18px;
+}
+
+.submit-accuont-form:hover{
+    background: #005264;
+    color: #00c5f6;
+}
