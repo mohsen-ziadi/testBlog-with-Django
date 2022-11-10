@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,Account
+from .models import Post
 
 # Register your models here.
 
@@ -12,7 +12,3 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ('-publish','status')
     list_editable =('status',)
     list_display_links = ('slug',)
-
-@admin.register(Account)
-class AccountAdmin(admin.ModelAdmin):
-    list_display = ('phone',)
