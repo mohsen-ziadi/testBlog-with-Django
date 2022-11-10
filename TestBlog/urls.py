@@ -18,7 +18,7 @@ from django.urls import include, path
 from blog import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name="admin"),
     path('blog/',include('blog.urls')),
     path('',views.index,name="index")
 ]

@@ -8,6 +8,7 @@
     <div class="content">
         <div class="container">
             <h2 class="titr-post-list">فرم اطلاعات شخصی:</h2>
+            <div id="AccountForm">
                 <form method="post">
                     <span>نام:</span>
                     <input class="input-account-form" type="text" name="first_name" required
@@ -45,9 +46,10 @@
                     </textarea>
                     <br>
                     <span> </span>
-                    <input type="submit" value="OK">
+                    <input class="submit-accuont-form" type="submit" value="ثبت تغییرات">
                     {% csrf_token %}
                 </form>
+            </div>
         </div>
     </div>
 {% endblock %}
