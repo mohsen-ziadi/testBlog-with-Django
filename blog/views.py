@@ -47,6 +47,7 @@ def UserAccount(request):
             user.first_name = form.cleaned_data['first_name']
             user.last_name = form.cleaned_data['last_name']
             account.gender = form.cleaned_data['gender']
+            account.phone = form.cleaned_data['phone']
             account.address = form.cleaned_data['address']
             user.save()
             account.save()

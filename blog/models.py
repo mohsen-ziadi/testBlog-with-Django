@@ -34,6 +34,7 @@ class Account(models.Model):
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='account')
     gender = models.CharField(max_length=7,choices=GENDER_CHOICE,default='male')
+    phone = models.CharField(max_length=11,null=True,blank=True)
     address=models.TextField(null=True,blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

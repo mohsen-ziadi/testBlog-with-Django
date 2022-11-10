@@ -8,13 +8,46 @@
     <div class="content">
         <div class="container">
             <h2 class="titr-post-list">فرم اطلاعات شخصی:</h2>
-            <form action="" method="post">
-                <form action="/your-name/" method="post">
-                    {% csrf_token %}
-                    {{ form }}
+                <form method="post">
+                    <span>نام:</span>
+                    <input class="input-account-form" type="text" name="first_name" required
+                            {% if form.first_name.value %}
+                           value="{{ form.first_name.value }}" {% else %}
+                           value="{{ account.user.first_name|default:' ' }}" {% endif %}>
+                    <br>
+
+                    <span>نام خانوادگی:</span>
+                    <input class="input-account-form" type="text" name="last_name" required
+                            {% if form.last_name.value %}
+                           value="{{ form.last_name.value }}" {% else %}
+                           value="{{ account.user.last_name|default:' ' }}" {% endif %}>
+                    <br>
+
+                    <span>شماره همراه:</span>
+                    <input class="input-account-form" type="text" name="phone"
+                           value="{{ account.phone|default:'' }}">
+                    <br>
+
+                    <span>جنسیت:</span>
+                    مرد
+                    <input type="radio" name="gender" value="male" {% if account.gender == "male" %}
+                           checked {% endif %}>
+
+                    زن
+                    <input type="radio" name="gender" value="female" {% if account.gender == "female" %}
+                           checked {% endif %}>
+                    <br>
+
+                    <span>آدرس:</span>
+                    <textarea name="address" required>
+                        {% if form.address.value %} {{ form.address.value }} {% else %}
+                            {{ account.address.value|default:'' }} {% endif %}
+                    </textarea>
+                    <br>
+                    <span> </span>
                     <input type="submit" value="OK">
+                    {% csrf_token %}
                 </form>
-            </form>
         </div>
     </div>
 {% endblock %}
