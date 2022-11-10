@@ -8,9 +8,12 @@
     <div class="content">
         <div class="container">
             <h2 class="titr-post-list">فرم اطلاعات شخصی:</h2>
-            {{ form.as_p }}
-                {% csrf_token %}
-                <input type="submit" value="ثبت">
+            <form action="" method="post">
+                <form action="/your-name/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="OK">
+                </form>
             </form>
         </div>
     </div>

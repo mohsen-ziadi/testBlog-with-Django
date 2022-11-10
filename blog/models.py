@@ -27,5 +27,17 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Account(models.Model):
+    GENDER_CHOICE=(
+        ('male','male'),
+        ('female','female')
+    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='account')
+    gender = models.CharField(max_length=7,choices=GENDER_CHOICE,default='male')
+    address=models.TextField(null=True,blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.user.first_name + " " + self.user.last_name
 
