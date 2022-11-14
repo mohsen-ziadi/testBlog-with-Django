@@ -223,23 +223,27 @@ footer .footer-item p {
     font-size: 30px;
 }
 
-.post-detail span{
+.post-detail span {
     color: #777;
     font-size: 18px;
 }
-.post-detail p{
+
+.post-detail p {
     margin-top: 20px;
     padding: 15px 0;
     border-bottom: 1.5px solid #888;
 }
 
-.share_post{
+
+/*strat share form*/
+
+.share_post {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #005264;
 }
 
-.share_post form p{
+.share_post form p {
     display: inline-block;
 }
 
@@ -408,15 +412,69 @@ form{
 }
 
 .submit-accuont-form{
+    display: inline-block;
+    text-align: center;
     width: 505px;
-    height: 40px;
+    line-height: 40px;
     background: #00c5f6;
     border: 2.5px solid #005264;
     color: #005264;
     font-size: 18px;
+    padding: 0;
 }
 
-.submit-accuont-form:hover{
+a.logout{
+    background:darkred!important;
+    color: #fff;
+    font-size: 19px;
+    border: none !important;
+}
+
+a.logout:hover{
+    background: red!important;
+    color: #000;
+}
+
+.submit-accuont-form:hover {
     background: #005264;
     color: #00c5f6;
+}
+
+
+/*start login form*/
+#login {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#login div {
+    text-align: center;
+    width: 400px;
+    background: #f6f6f6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#login form input {
+    display: block;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.login-submit {
+    width: 258px !important;
+    background: #005264 !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.login-submit:hover {
+    background: #00c5f6 !important;
+    color: #000 !important;
 }

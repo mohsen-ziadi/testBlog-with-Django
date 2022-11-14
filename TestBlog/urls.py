@@ -20,5 +20,7 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls,name="admin"),
     path('blog/',include('blog.urls')),
-    path('',views.index,name="index")
+    path('',views.index,name="index"),
+    path('login/',views.user_login,name="login"),
+    path('logout/',views.loguot_view,name="logout")
 ]

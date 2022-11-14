@@ -1,6 +1,7 @@
-from django.shortcuts import render,get_object_or_404,redirect
+from django.shortcuts import render,get_object_or_404,redirect,HttpResponse
 from django.core.mail import send_mail
 from django.views.generic import ListView
+from django.contrib.auth import login,authenticate,logout
 
 # Create your views here.
 from .models import Post,Account
@@ -70,6 +71,31 @@ def UserAccount(request):
             return render(request,'blog/forms/account_form.html',{'form':form,'account':account})
     form = AccountForm()
     return render(request,'blog/forms/account_form.html',{'form':form,'account':account})
+
+def user_login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(request,username=cd['username'],password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('blog:UserAccount')
+                else:
+                    return redirect('blog:index')
+            else:
+                return redirect('blog:index')
+    else:
+        form = LoginForm()
+    return render(request,'blog/forms/login.html',{"form":form})
+
+def loguot_view(request):
+    logout(request)
+    return redirect("login")
+
+
+
 
 
 
