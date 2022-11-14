@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404,redirect
+from django.shortcuts import render,get_object_or_404,redirect,HttpResponse
 from django.core.mail import send_mail
 from django.views.generic import ListView
 from django.contrib.auth import login,authenticate,logout
@@ -89,6 +89,10 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request,'blog/forms/login.html',{"form":form})
+
+def loguot_view(request):
+    logout(request)
+    return redirect("login")
 
 
 

@@ -412,12 +412,27 @@ form{
 }
 
 .submit-accuont-form{
+    display: inline-block;
+    text-align: center;
     width: 505px;
-    height: 40px;
+    line-height: 40px;
     background: #00c5f6;
     border: 2.5px solid #005264;
     color: #005264;
     font-size: 18px;
+    padding: 0;
+}
+
+a.logout{
+    background:darkred!important;
+    color: #fff;
+    font-size: 19px;
+    border: none !important;
+}
+
+a.logout:hover{
+    background: red!important;
+    color: #000;
 }
 
 .submit-accuont-form:hover {

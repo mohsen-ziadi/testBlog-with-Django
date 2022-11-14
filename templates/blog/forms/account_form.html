@@ -47,7 +47,10 @@
                     <br>
                     <span> </span>
                     <input class="submit-accuont-form" type="submit" value="ثبت تغییرات">
-
+                    <br>
+                    <br>
+                    <span> </span>
+                    <a href="{% url "logout" %}" class="submit-accuont-form logout">خروج از حساب کاربری</a>
                     {% csrf_token %}
                 </form>
             </div>
