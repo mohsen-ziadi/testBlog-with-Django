@@ -15,3 +15,8 @@ class AccountForm(forms.Form):
 class ShareForm(forms.Form):
     name_share=forms.CharField(max_length=25,required=True,label="نام و نام خانوادگی")
     email_share = forms.EmailField(required=True,label="ایمیل")
+
+class LoginForm(forms.Form):
+    username=forms.CharField()
+    password=forms.CharField()
+
