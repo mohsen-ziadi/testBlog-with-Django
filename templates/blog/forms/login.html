@@ -1,0 +1,23 @@
+{% extends 'blog/parent/base.html' %}
+
+{% block title %}
+    صفحه نخست
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container">
+            <h2 class="titr-post-list " align="center">ورود به سایت </h2>
+            <div id="login">
+                <div>
+                    <form method="post">
+                        <input type="text" name="username" placeholder="نـام کاربــــری">
+                        <input type="password" name="password" placeholder="رمـــــز عبــــور">
+                        {% csrf_token %}
+                        <input type="submit" value="ورود">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
