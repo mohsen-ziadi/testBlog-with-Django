@@ -31,12 +31,11 @@ class PostListView(ListView):
 def post_detail(requset,post,pk):
     post = get_object_or_404(Post,slug=post,id=pk)
     sent = False
-    form = ShareForm(requset)
-
+    form = ShareForm(requset.POST)
     if requset.method == 'POST':
         if form.is_valid():
             cd = form.cleaned_data
-            post_url = requset.build_absolute_url(post.get_absolute_url())
+            post_url = requset.build_absolute_uri()
             subject = ".{0} شما را به خواندن متن {1} دعوت کرده است.".format(cd['name_share'],post.title)
             msg='با سلام .{0} .{1} شما را به خواندن متن {2} دعوت کرده است. {3} با تشکر {4} بلاگ نمونه'.format('\n', cd['name_share'],post.title,'\n','\n ')
             send_mail(subject,msg,'mohzia1380@gmail.com',[cd['email_share']],fail_silently=False)
