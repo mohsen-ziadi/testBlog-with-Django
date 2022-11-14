@@ -1,6 +1,7 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from django.core.mail import send_mail
 from django.views.generic import ListView
+from django.contrib.auth import login,authenticate,logout
 
 # Create your views here.
 from .models import Post,Account
@@ -70,6 +71,10 @@ def UserAccount(request):
             return render(request,'blog/forms/account_form.html',{'form':form,'account':account})
     form = AccountForm()
     return render(request,'blog/forms/account_form.html',{'form':form,'account':account})
+
+
+
+
 
 
 
