@@ -4,7 +4,7 @@ from django.views.generic import ListView
 
 # Create your views here.
 from .models import Post,Account
-from  .forms import AccountForm
+from  .forms import *
 
 def index(requset):
     return render(requset, 'blog/post/index.html')
@@ -30,7 +30,21 @@ class PostListView(ListView):
 
 def post_detail(requset,post,pk):
     post = get_object_or_404(Post,slug=post,id=pk)
-    return render(requset,'blog/post/detail.html',{"post":post})
+    sent = False
+    form = ShareForm(requset.POST)
+    if requset.method == 'POST':
+        if form.is_valid():
+            cd = form.cleaned_data
+            post_url = requset.build_absolute_uri()
+            subject = ".{0} شما را به خواندن متن {1} دعوت کرده است.".format(cd['name_share'],post.title)
+            msg='با سلام .{0} .{1} شما را به خواندن متن {2} دعوت کرده است. {3} با تشکر {4} بلاگ نمونه'.format('\n', cd['name_share'],post.title,'\n','\n ')
+            send_mail(subject,msg,'mohzia1380@gmail.com',[cd['email_share']],fail_silently=False)
+            sent=True
+            return render(requset,'blog/post/detail.html',{"post":post,'form':form})
+        else:
+            form=ShareForm()
+            return render(requset, 'blog/post/detail.html', {"post": post, 'form': form})
+    return render(requset,'blog/post/detail.html',{"post":post,'form':form})
 
 
 def UserAccount(request):

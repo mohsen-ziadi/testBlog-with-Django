@@ -18,13 +18,25 @@
                 <p>{{ post.body }}</p>
             </div>
 
+            <div class="share_post">
+                <h2 class="titr">
+                   اشتراک گذاری از طریق ایمیل
+                </h2>
+                <form method="post">
+                    {{ form.as_p }}
+                    {% csrf_token %}
+                    <label for=""></label>
+                    <input class="share_submit" type="submit" value="اشتراک گذاری">
+                </form>
+            </div>
+
             <div class="comment-form">
                 <h2 class="titr">
                     ارسال نظرات
                 </h2>
                 <form action="#">
 
-                    <input id="name-input" placeholder="نام" name="name" type="text">
+                    <input id="name-input" placeholder="نام" name="first_name" type="text">
                     <input id="lastname-input" placeholder="نام خانوادگی" name="lastname" type="text">
                     <input id=email-input" placeholder="ایمیل" name="email" type="text">
                     <br>
