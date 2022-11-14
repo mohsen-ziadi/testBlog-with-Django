@@ -233,6 +233,45 @@ footer .footer-item p {
     border-bottom: 1.5px solid #888;
 }
 
+.share_post{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #005264;
+}
+
+.share_post form p{
+    display: inline-block;
+}
+
+.share_post form label{
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.share_post form input{
+    border: 1px solid #555;
+    width: 205px;
+    font-size: 20px;
+    color: #444;
+    padding: 5px 15px;
+    margin:0 20px;
+}
+
+.share_submit{
+    width: 236px !important;
+    background: #005264 !important;
+    border: none !important;
+    color: #fff!important;
+    cursor: pointer;
+}
+
+.share_submit:hover{
+    background: #00c5f6 !important;
+    color: #000 !important;
+}
+
 /*comment form*/
 .comment-form {
 }
@@ -241,7 +280,7 @@ form{
 }
 .comment-form input{
     /*border: none;*/
-    borde: 1px solid #555;
+    border: 1px solid #555;
     width: 305px;
     font-size: 20px;
     color: #444;
