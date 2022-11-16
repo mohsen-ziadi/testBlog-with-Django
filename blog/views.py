@@ -29,6 +29,8 @@ class PostListView(ListView):
     paginate_by = 8
     template_name = 'blog/post/list.html'
 
+
+#functions
 def post_detail(requset,post,pk):
     post = get_object_or_404(Post,slug=post,id=pk)
     sent = False
